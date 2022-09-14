@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH35 : ajouter/insérer des élements HTML</title>
+ 
+    <!-- <h1>CH35 : ajouter/insérer des élements HTML</h1> -->
+    <!--c'est du mauvaise pratique d'ecrire <h1>titre</h1> dans la partie head -->
+</head>
+<body>
+    <h1 id="gros_titre">Découverte du DOM HTML</h1>
+    <p class="span">Du texte et <a href="http://pierre-giraud.com">un lien</a></p>
+    
+    <p class="para">Du texte et <a href="http://pierre-marwen.com">un lien</a></p>
+    <p class="para">un deuxiéme paragraphe</p>
+    <script>
+       var newPara = document.createElement('p');  //créer un element de type <p>//
+       newPara.id ="nouveau" 
+
+       var texte = document.createTextNode("Inséré"); //créer un noeud de type text //
+
+       newPara.appendChild(texte);    //insérer le texte dans l'élement <p> //
+
+       document.body.appendChild(newPara)  //insérer l'élement <p> dans la page//
+
+       para1 = document.querySelector('.para')
+
+       document.body.insertBefore(newPara,para1);  
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

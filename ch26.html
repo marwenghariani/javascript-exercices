@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>les methode de l'objet Date</h1>
+</head>
+<body>
+<script>
+    //le getteurs//
+    var d = new Date();
+
+     dms = d.getTime();
+     dy = d.getFullYear();
+     dma = d.getMonth()+1;
+     ddate = d.getDate();
+     dday = d.getDay(); 
+
+     dh = d.getHours();
+     dmi = d.getMinutes();
+     ds = d.getSeconds();
+     dMs = d.getMilliseconds();
+
+    alert("nous somme le : "+ddate+"/"+dma+"/"+dy+
+    "\nil est actuellement : "+dh+":"+dmi+":"+ds+":"+dMs)
+
+    //les setteurs//
+
+     var d = new Date();
+
+     d.setFullYear(2022,7,27)
+     d.setHours(16)
+     d.setMinutes(15)
+     d.setSeconds(55)
+     d.setUTCMilliseconds(100)
+     alert("la date positionner : "+d)
+
+     //formater une date en js //
+
+     var d = new Date();
+
+     dy = d.getFullYear()
+     dmo = d.getMonth()
+     dday = d.getDay()
+     ddate = d.getDate()
+      
+     dh =d.getHours()
+     dmi = d.getMinutes()
+     ds = d.getSeconds()
+
+     var mois=['janvier','fevrier','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','decembre']
+     var jours = ['dimanche','lundi','mardi','mercredi','jendi','vendredi','samedi']
+
+     alert("le"+" "+jours[dday]+" "+ddate+" "+mois[dmo]+" "+dy+
+     "\nil est : "+dh+":"+dmi+":"+ds)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    
+    
+</body>
+</html>

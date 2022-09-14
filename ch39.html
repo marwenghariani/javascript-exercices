@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>la méthode ADDEVENTLISTENER()</title>
+</head>
+<body>
+    <h1 id="gros_titre">les évenements</h1>
+    <p>passez sur moi</p>
+    <p>un deuxiéme <strang>paragraphe</strang></p>
+    <script>
+        var p1 = document.querySelector('p');
+    /*  p1.addEventListener('click',changeTexte);
+
+        function changeTexte() {
+            this.innerHTML = '<strong> bravo ! </strong>'
+            this.style.color = 'orange';
+        }                                       
+        // modification de méthode //
+        p1.addEventListener('click',function changeText(){
+            this.innerHTML = '<strong> bravo ! </strong>'
+            this.style.color = 'orange';  
+        })                                                      */
+
+    /*    p1.addEventListener('click',message1)
+        p1.addEventListener('click',message2)
+
+        function message1(){
+            alert('premier message')
+        }
+        function message2(){
+            alert('deuxiéme message')
+            
+        }                                                          */
+
+        //mouseover/out & mousedown/up //
+
+        p1.addEventListener('mouseover',fonction1) //déclenchement:lors de passer le curseur sur l'élément//
+        p1.addEventListener('mouseout',Reset1)  //déclenchement:lors de passer l'élément en dehors de l'élément //
+        p1.addEventListener('mousedown',fonction2) //déclenchement: aprés l'appuie sur l'élément//
+        p1.addEventListener('mouseup',Reset2) //déclenchement:relacher sur l'élement //
+
+     //NB:click se déclenche aprés un clique entier(presse+ relache)//
+        function fonction1(){
+            this.innerHTML ='cliquez moi maintenant'
+            this.style.backgroundColor = 'orange'
+        }
+
+        function Reset1() {                  
+            this.innerHTML = "passez sur moi"
+            this.style.backgroundColor = '';
+            
+        }
+        function fonction2(){
+            this.innerHTML ='Bravo' ; 
+            this.style.color = 'green' ;
+            this.style.fontWeight = 'bold';
+            this.style.fontSize = '24px';
+        }   
+        function Reset2() {
+            this.innerHTML='cliquez moi maintenant '
+            this.style.color = '' ;
+            this.style.fontWeight = '';
+            this.style.fontSize = '';
+        }
+
+
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>

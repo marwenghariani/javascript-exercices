@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch33:accéder a un élement HTML</title>
+</head>
+<body>
+    <h1 id="gros_titre">Découverte du DOM HTML</h1>
+    <p class="span">Du texte et <a href="http://pierre-giraud.com">un lien</a></p>
+    <p class="para">Du texte et <a href="http://pierre-marwen.com">un lien</a></p>
+    <p class="para">un deuxiéme paragraphe</p>
+    <script>
+    /*   var titre = document.getElementById("gros_titre")
+         alert(titre)
+        console.log(titre);  */   //pour trouver l'element possédant une attribut id dans la page//
+       // _______________________//
+
+     /*   var tableau = document.getElementsByTagName('p')
+      alert("notre page contient : "+tableau.length+"paragraphe")
+      console.log(tableau);   */    // pour accéder a tous les élements de type <p> de la page//
+
+        //________________________//
+
+     /*  var tableau = document.getElementsByClassName('span')
+       alert("notre page contient : "+tableau.length+"classe")
+       alert("notre page contient : "+tableau.length+"paragraphe portant la classe 'para'") 
+       console.log(tableau);   */   //pour accéder a tout les élements possédant la class donné//
+
+       //querySelectorAll pour accéder a tout les élement correspand a l'éléments met en argument//
+ /*  var lien = document.querySelectorAll('p a');
+    var p = document.querySelectorAll(".para");
+
+     alert("information dans lien : "+lien+
+     "\n dans p[0] : "+p[0]+
+     "\n dans p[1] : "+p[1]);
+    console.log(lien);
+    console.log(p);     
+
+        console.log(p[0]);
+        console.log(p[1]);  */
+
+        //querySelector() pour accéder ou premier element de page qui correspand ou element met dans l'argument//
+       /* var lien = document.querySelector('p a')
+        var p = document.querySelector('.span')  //NB: on utilise le point avt le selecteur css//
+        alert(lien)
+        alert(p)
+        console.log(lien);
+        console.log(p);      */
+
+
+        //les proprieté innerHTML ET textContent sont des proprieté de l'objet element et pas de l'objet document //
+    /*  var titre = document.getElementById('gros_titre').innerHTML;
+        alert(titre)
+       console.log(titre);  */
+
+     /*  var p = document.querySelector(".para").innerHTML; //récuperer l'élement entier//
+       alert(p)
+
+       var  t=document.querySelector(".para").textContent; //récuperer le contenue de l'élement// 
+       alert(t) */
+
+       //accéder a un element par une proprieté de mémé nom//
+
+      /* var titre_page = document.title;
+       alert(titre_page)
+       console.log(titre_page); 
+
+       var page = document.body;
+       alert(page)
+       console.log(page);  
+       
+       var lien =document.links;  
+       alert(lien) 
+       console.log(lien);  */
+       
+       </script>
+
+       
+    
+</body>
+</html>
+
+
+

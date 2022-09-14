@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>le BOM et L'objet window</title>
+</head>
+<body>
+    <h1 id="gros_titre">LE BOM</h1>
+    <p>cliquer pour ouvrir un nouvel onglet </p>
+    <script>
+    var para = document.querySelector('p');
+    para.addEventListener('click',fenetre);
+
+    function fenetre() {
+        window.open('http://pierre-giroud.com','blank','width = 500, height = 300');
+    }
+
+    </script>
+    
+</body>
+</html>

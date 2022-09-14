@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // la methode toUpperCase et toLowerCase//
+        var text = "j'apprens LE JAVASCRIPT";
+        textmax = text.toUpperCase(3);
+        textmin = text.toLowerCase();
+        alert("text : " + text +
+            "\ntextmax: " + text.toUpperCase() +
+            "\ntextmin : " + text.toLowerCase())
+        //la méthode charAt()//
+        var text = "j'apprens LE JAVASCRIPT"
+        position0 = text.charAt(0);
+        position1 = text.charAt(1);
+        position2 = text.charAt(2);
+        pos9 = text.charAt(9)
+        alert('position0 :' + text.charAt(0) +
+            "\nposition1 : " + text.charAt(1) +
+            "\nposition2 : " + text.charAt(2) +
+            "\npos9 : " + text.charAt(9))
+        //la méthode indexOf() et LastIndexOf()//
+        text = "J'apprens le Javascript"
+        premiere = text.indexOf('p');
+        dernier = text.lastIndexOf('p');
+        sequence = text.indexOf('le');
+        sequence = text.indexOf("LE");
+        premier = text.indexOf('J',1);
+
+
+        alert("premier occurence de p : " + text.indexOf("p") +
+            "\ndernier occurence de p : " + text.lastIndexOf("p") +
+            "\nsequence le : " + text.indexOf("le") +
+            "\nsequence LE : " + text.indexOf("LE")+
+            "\npremier : "+text.indexOf('J',1))
+        //la méthode replace(remplacer)//
+        var texte="j'apprends le javascript";
+        alert(texte.replace("javascript","php"));
+        //la méthode slice (trancher = couper)//         
+        var texte="j'apprends le javascript ";
+        alert(texte.slice(-11,-1));
+        // la méthode trime //
+        var texte="   j'apprends le javascript";
+       var textnettoye=texte.trim();
+        alert('avant trime: '+texte+
+        "\napres trime : "+textnettoye);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

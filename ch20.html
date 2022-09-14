@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>les méthodes de creation des objets </h1>
+    <script>
+        //  méthode 1 objet letteral //
+        /* var personne = {
+ 
+             nom: "pierre",
+             prenom: "giroud",
+             age: 25,
+ 
+             id: function () {
+                 return "nom : " + personne.nom +
+                     "\n prenom : " + personne.prenom +
+                     "\nage : " + personne.age;
+             }
+         }
+         alert(personne.id());
+ 
+         // méthode 2 new object //
+         var personne = new Object();
+         personne.nom = "pierre";
+         personne.prenon = "giroud";
+         personne.age = 25,
+             alert(personne.age);
+ 
+         // méthode 3 le constructeur //
+ 
+         function personne(p, n, a) {
+             this.prenon = p;
+             this.nom = n;
+             this.age = a;
+         }
+         var pierre = new personne("pierre", "giroud", 25);
+         var marwen = new personne("marwen", "ghariani", 30);
+         alert('age de pierre: ' + pierre.age +
+             "\n age de marwen : " + marwen.age);
+         //changement de  contenue entre valeur primitif et objet //
+         var x = 10;
+         var y = x;
+         y += x;
+         alert("la valeur de x : " + x +
+             "\nla valeur de  y : " + y); */
+
+        // 3éme methode la fonction constructeur
+       /*  function identite(a,b,c){
+            this.prenom=a;
+            this.nom=b;
+            this.age=c;
+        }
+        pierre= new identite("pierre","giroud",25);
+        victor= new identite("victor","durand",24);
+        alert("age de pierre : " + pierre.age+
+        "\nage de victor : "+victor.age) */
+
+        //identité des objets//
+       var x=10;
+        var y=x;
+        y+=x;
+        alert("y égal : "+y+
+        "\n x ="+x) 
+        // la raison c'est qu'on peut faire une copie de (ou bien) stocker x dans y//
+    function Personne(n,p,a){
+        this.nom=n;
+        this.prenom=p;
+        this.age=a;
+    }
+    var pierre = new Personne("pierre","giroud",25);
+    var victor = pierre;
+
+    victor.prenom = "dfsk";
+    alert("prenom de pierre : "+pierre.prenom+
+    "\nprenom de victor : "+victor.prenom);
+
+
+
+
+   
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

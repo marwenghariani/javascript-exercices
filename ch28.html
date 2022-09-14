@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>la portée en js</h1>
+</head>
+<body>
+    <script>
+        //variable local//
+        
+     /*  function local(){
+        var x = 5;
+        alert(x)
+       }
+       local();   
+
+       //variable globale//
+
+       var x = 4;
+       function global(){
+           alert(x)
+       }
+       global() //appel pour afficher x local//
+       alert(x); //alert pour afficher x global//    */
+
+       //l'utilisation de 2 variables de meme nom en global et en local (déconseiller) //
+     /*  var x = 4;
+       function locale(){
+           var x = 7;
+           return x;
+       }
+       alert("x globale : "+x+
+       "\nx locale : "+locale())   */
+
+       //l'usage de mot cle var //
+
+       function locale(){
+         x=7 ;
+       
+        alert(x)
+        
+       console.log(x);
+       }
+      locale()
+     /* ou bien : locale()
+     alert(x) */ 
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

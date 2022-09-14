@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l'OBJET EVENT</title>
+    <style>
+       #div1{
+            border: 1px solid black;
+            background-color:greenyellow;
+            padding: 10px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="gros-titre">les événements</h1>
+    <div id="div1">
+        <p id="p1">qui est le déclencheur ? le porteur de gestionner d'événement ?</p>
+    </div>
+    <script>
+        var div1 =document.getElementById('div1'); 
+        var p1 = document.getElementById('p1');
+
+//la propriété target: pour connaitre l'élement déclencheur//
+//la propriété currentTarget:pour connaitre l'élement porteur de gestionnaire d'évenement //
+
+    /*   div1.addEventListener('click',Message); // demander au div1 de réagir en mode click//
+        function Message(){
+            this.innerHTML =" élement déclencheur : "+event.target+  
+            "\n élement portant l'évenement : "+event.currentTarget  
+        }                                                                   
+
+        // la propriété type : pour connaitre le type de l'évenement //
+
+        div1.addEventListener('click',Message);
+        function Message(event) {
+            this.innerHTML ="type d'événement : "+event.type
+           
+        }                                                                          */
+        
+        // la méthode stopevent: pour arréter la propagation de l'évenement //
+
+        div1.addEventListener('click',textD,true); // l'ordre de déclenchement:div1,p1 .
+        p1.addEventListener('click',textP,true); //l'événement lié au div1(click) va s'arreter de propager car on utlise la phase de capture.
+
+        function textD(e){ //arréter la propagation de l'évenement plus loin aprés le déclenchement sur le div1
+            alert('stop a la propagation');
+            e.stopPropagation();
+         }
+
+        function textP() {  //l'événement lié ou p1 ne sera jamais déclencher
+            alert("ceci ne s'affichera pas ");  
+            
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

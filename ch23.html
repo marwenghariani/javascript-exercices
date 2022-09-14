@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>l'objet Array</h1>
+    <script>
+
+ /*   var prenoms = ['pierre','victor','julia','claire'];
+    //pour accéder a un élement de tableau //
+    prenoms[0]="marwen";
+    alert(prenoms[0])
+    //pour ajauter des élements a un tableau //
+    prenoms[prenoms.length]="programmation"
+    prenoms[prenoms.length]="java"
+//pour connaitre le nbre d'elements de tabeau//
+   alert("notre tableau contient : "+ prenoms.length + "elements");
+   //pour afficher le contenue de case de tableau //
+   alert("on a ajouté deux élements au tableau : "+prenoms[4]+" " +prenoms[5])
+   alert("on a ajauté"+" "+"programmation"+" "+"et"+" "+"java"+" "+"a notre tableau")
+   //le boucle for pour parcourir le tableaux//  
+   var prenoms = ["pierre","victor","julia","claire"];
+    p='';
+   for (var i=0 ; i<prenoms.length;i++){
+       p+="l'element n°"+(i+1)+":"+ prenoms[i]+"\n"; 
+
+   }
+   alert(p); */
+
+   //les tableaux associatif//
+   var prenoms = ["pierre","victor","julia","claire"];   
+   var prenoms ={
+       prenom1:"pierre",
+       prenom2:"victor",
+       prenom3:"julia",
+       prenom4:"claire",
+   }, p=' ';
+   for(var clefs in prenoms){
+       p+=clefs+':'+prenoms[clefs]+"\n";
+   }
+   alert(p)
+   
+
+
+   
+</script>  
+</body>
+</html>

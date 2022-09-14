@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <h1>les methodes de l'objet Array</h1>
+</head>
+
+<body>
+    <script>
+
+        //(push/pop) pour (ajauter/supprimer) des elements a la fin de tableau//
+         var prenoms = ["pierre", "victor", "julia", "claire"];
+      /*    prenoms.push("marou","ghariani")
+          alert(prenoms)
+         suprim=prenoms.pop()
+        //  alert(suprim)
+        //  alert(prenoms)
+            p = '';
+          for (var i = 0; i < prenoms.length; i++) {
+              p += 'prenom n°' + (i + 1) + ":" + prenoms[i] + "\n"; 
+  
+          } 
+          alert(p+"\n\n nous avons supprimé : " + suprim +" "+'du tableau');   */
+
+          //unshift/shift pour ajouter des elements au debut de tableau //
+      /*    var ajout = prenoms.unshift("marou","ghari")
+          alert(prenoms)
+          var supp =prenoms.shift("marou","ghari")
+          alert(prenoms)                                                       */
+  
+          //splice pour ajouter ou supprimer des elements dans n'importe qu'elle position//
+          prenoms.splice(0,4,"five","point")
+          alert(prenoms) 
+
+        //la méthode sorte pour classer les elements dans l'ordre alphabétique //
+     /*   var prenoms = ['Pierre', 'pierre', 'Julia', 'julia']
+        prenoms.sort()
+        alert(prenoms)
+        prenoms.reverse()
+        alert(prenoms)
+
+        // reverse table of strings //
+      /*  var prenoms = ["Pierre", "pierre", "Julia", "marwen"];
+        prenoms.sort();
+        alert(prenoms)
+        prenoms.reverse();
+        alert(prenoms) */
+
+        //join pour retourner les element du tab en chaine//
+
+        //NB:la methode join ne modifie pas le tab plus tot elle cré une chaine a partir des élements de tab //
+     /*   var prenoms = ["Pierre", "pierre", "Julia", "julia"];
+        var  chaine=prenoms.join("/")
+        alert(chaine)
+        alert(prenoms)
+    
+        p = '';
+          for (var i = 0; i < prenoms.length; i++) {
+              p += 'prenom n°' + (i + 1) + ":" + prenoms[i] + "\n"; 
+  
+          } 
+        //  alert(p+"\n\nla chaine renvoyé par join() : "+chaine)  */
+      //slice//
+
+         var prenoms = ["pierre","victor","julia","cloé"]
+         var mal = prenoms.slice(0,2);
+         var femel = prenoms.slice(2,4);
+   
+         console.log(mal)
+         console.log(prenoms)
+         console.log(femel)
+   
+         //concat//
+         var gf=femel.concat(mal)
+         console.log(gf); 
+
+    </script>
+</body>
+
+</html>

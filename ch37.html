@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naviguer dans le DOM</title>
+</head>
+
+<body>
+    <h1 id="gros_titre">LE DOM</h1>
+    <div>
+        <p class="para" id="hh">du texte</p> 
+        <p class="para">un deuxiéme<strong>paragraphe</strong></p>
+    </div>
+    <script>
+        //parentNode: pour trouver l'élement parent//
+
+    /*    var p = document.querySelector('.para'); //trouver un l'element correspand au selecteur id de hh//
+        console.log(p);
+        var div = p.parentNode; //pour accéder ou neud parent//    
+        console.log(div);
+        div.style.color = 'blue';       */ 
+
+        //childNode: pour accéder ou neud enfant//
+
+    /*    var b = document.body;
+        var div = b.childNodes[3];
+        var p1 = div.childNodes[1];
+        var text = p1.childNodes[0].textContent;  //on applique nodeValue pour accéder a la valeur text contenue dans l'élement//
+        alert(text); //les espace et les elements sont considére comme un node //      */
+
+        //firstChild et lastChild//
+
+    /*   var p2 = document.querySelectorAll('.para')[1];
+        var premier = p2.firstChild.nodeValue //ON APPLIQUE nodeValue sur une node de type text//
+        var dernier = p2.lastChild.childNodes[0].nodeValue  //ON APPLIQUE innerHTML OU BIEN textContent sur une node de type element//
+        alert(premier+'\n'+dernier)               */                                                  
+
+
+      /*  var premier = p2.firstChild
+        var dernier = p2.lastChild
+        alert(premier)     //[object text]//
+        alert(dernier)     //[object HTML Element]//  */
+
+        //nextSibling :(renvoie)ou accéder à l'élément suivant//  
+
+        var titre = document.getElementById('gros_titre')
+        var div = titre.nextSibling.nextSibling;
+
+        div.innerHTML= "div totalement modifié"
+
+
+
+
+    </script>
+
+</body>
+
+</html>
